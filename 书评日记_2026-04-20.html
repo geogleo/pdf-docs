@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>2026-04-20 书评日记</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 2.5cm 2cm;
+            @bottom-center {
+                content: counter(page);
+                font-size: 10pt;
+            }
+        }
+        
+        body {
+            font-family: "Noto Serif CJK SC", "Source Han Serif SC", "SimSun", serif;
+            font-size: 11pt;
+            line-height: 1.8;
+            color: #333;
+            text-align: justify;
+        }
+        
+        h1 {
+            font-family: "Noto Sans CJK SC", "Source Han Sans SC", sans-serif;
+            font-size: 20pt;
+            font-weight: bold;
+            color: #1a1a1a;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 0.5em;
+            padding-bottom: 0.3em;
+            border-bottom: 3px solid #2f4f4f;
+        }
+        
+        h2 {
+            font-family: "Noto Sans CJK SC", "Source Han Sans SC", sans-serif;
+            font-size: 14pt;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin-top: 1.5em;
+            margin-bottom: 0.8em;
+            padding-left: 0.5em;
+            border-left: 4px solid #2f4f4f;
+            background: linear-gradient(to right, #f5f5f0, transparent);
+        }
+        
+        h3 {
+            font-family: "Noto Sans CJK SC", "Source Han Sans SC", sans-serif;
+            font-size: 12pt;
+            font-weight: bold;
+            color: #333;
+            margin-top: 1.2em;
+            margin-bottom: 0.5em;
+        }
+        
+        p {
+            margin-bottom: 0.8em;
+            text-indent: 2em;
+        }
+        
+        p:first-child {
+            text-indent: 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1em 0;
+            font-size: 10pt;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 0.5em;
+            text-align: left;
+        }
+        
+        th {
+            background: #f5f5f0;
+            font-weight: bold;
+        }
+        
+        ul, ol {
+            margin: 0.5em 0 0.5em 2em;
+        }
+        
+        li {
+            margin-bottom: 0.3em;
+        }
+        
+        strong {
+            color: #1a1a1a;
+        }
+        
+        .summary {
+            background: #f9f9f9;
+            padding: 1em;
+            margin: 1em 0;
+            border-left: 3px solid #2f4f4f;
+        }
+        
+        .footer {
+            margin-top: 2em;
+            text-align: center;
+            font-weight: bold;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<h1>2026-04-20 书评日记</h1>
+
+<h2>一、今日工作总结</h2>
+
+<p>今天完成了 <strong>7篇书评</strong>，全部上传至 GitHub 仓库 <code>geogleo/pdf-docs</code>。</p>
+
+<h3>书评列表</h3>
+
+<table>
+<tr><th>序号</th><th>书名</th><th>作者</th><th>字数</th><th>备注</th></tr>
+<tr><td>1</td><td>《中国地质学》</td><td>杨遵仪、程裕淇、王鸿祯</td><td>约3200字</td><td>修正篇章结构</td></tr>
+<tr><td>2</td><td>《了不起的盖茨比》</td><td>F. Scott Fitzgerald</td><td>约3000字</td><td>补充改编信息</td></tr>
+<tr><td>3</td><td>《纽约外史》</td><td>华盛顿·欧文</td><td>约3000字</td><td>补充圣诞老人形象、中文版删减</td></tr>
+<tr><td>4</td><td>《让人民自由》</td><td>约翰·邓恩</td><td>约2600字</td><td>民主的概念史</td></tr>
+<tr><td>5</td><td>《胡适自述》</td><td>胡适</td><td>约2600字</td><td>含《四十自述》《南游杂记》《怀人集》</td></tr>
+<tr><td>6</td><td>《我不原谅》</td><td>钟道然</td><td>约2500字</td><td>90后教育批判</td></tr>
+<tr><td>7</td><td>《聪明的投资者》</td><td>本杰明·格雷厄姆</td><td>约2700字</td><td>补充巴菲特追随格雷厄姆的故事</td></tr>
+</table>
+
+<div class="summary">
+<strong>总计：约19600字</strong>
+</div>
+
+<h2>二、工作流程</h2>
+
+<p>今天的书评生产流程：</p>
+
+<ol>
+<li><strong>信息确认</strong> — 用户提供书名、作者、出版社等信息</li>
+<li><strong>资料搜索</strong> — 使用 web search 查找书籍背景、作者信息、评论</li>
+<li><strong>HTML撰写</strong> — 使用统一的书评模板（带CSS样式）</li>
+<li><strong>PDF转换</strong> — LibreOffice headless 模式</li>
+<li><strong>Git推送</strong> — 同时推送到 main 和 master 分支</li>
+</ol>
+
+<h2>三、书评特点</h2>
+
+<h3>3.1 结构统一</h3>
+
+<p>每篇书评采用相似的结构：引言（为何重要）、作者/背景、内容概述、核心观点、局限与反思、结语。这种结构保证了完整性，也便于读者阅读。</p>
+
+<h3>3.2 批判性思考</h3>
+
+<p>不只是介绍内容，也提出反思和批评：</p>
+<ul>
+<li>《了不起的盖茨比》：黛西的脸谱化、盖茨比的"无辜"是否被美化</li>
+<li>《让人民自由》：西方中心视角、概念史局限</li>
+<li>《我不原谅》：过于偏激？个人经验的普遍性？</li>
+<li>《聪明的投资者》：格雷厄姆过时了吗？</li>
+</ul>
+
+<h3>3.3 故事细节</h3>
+
+<p>通过具体细节让书评更生动：</p>
+<ul>
+<li>《了不起的盖茨比》：多次电影改编、1999年大都会歌剧院首演</li>
+<li>《纽约外史》：圣诞老人形象的塑造</li>
+<li>《聪明的投资者》：巴菲特"可以不要工资"追随格雷厄姆</li>
+</ul>
+
+<h2>四、主题分类</h2>
+
+<h3>思想类</h3>
+<ul>
+<li>《让人民自由》— 民主的概念史</li>
+<li>《胡适自述》— 自由主义者的自我书写</li>
+<li>《我不原谅》— 教育批判</li>
+</ul>
+
+<h3>文学类</h3>
+<ul>
+<li>《了不起的盖茨比》— 美国梦挽歌</li>
+<li>《纽约外史》— 讽刺文学典范</li>
+</ul>
+
+<h3>科学/投资类</h3>
+<ul>
+<li>《中国地质学》— 区域地质学里程碑</li>
+<li>《聪明的投资者》— 价值投资圣经</li>
+</ul>
+
+<h2>五、今日收获</h2>
+
+<ul>
+<li>对书籍的理解加深：写书评的过程也是重新理解书的过程</li>
+<li>写作技巧的提升：如何在有限篇幅内传达核心信息</li>
+<li>多样化的主题：地质、文学、政治、教育、投资</li>
+</ul>
+
+<h2>六、反思与改进</h2>
+
+<p><strong>可改进之处：</strong>部分书评可以更深入，增加更多原文引用；对作者背景的挖掘可以更充分；可以增加书籍之间的关联分析。</p>
+
+<p><strong>未来方向：</strong>尝试不同风格的书评（对话式、问答式）；增加书评之间的关联阅读建议；建立书籍主题索引。</p>
+
+<h2>七、文件管理</h2>
+
+<p>所有书评文件已保存到：</p>
+<ul>
+<li><strong>书评 HTML + PDF</strong>: <code>/home/xmliao/pdf-docs/</code></li>
+<li><strong>今日日记</strong>: <code>/home/xmliao/.openclaw/workspace/memory/2026-04-20.md</code></li>
+</ul>
+
+<p class="footer">今日产出：7篇书评，约19600字。充实的一天。</p>
+
+<p style="text-align: right; color: #888; margin-top: 2em;">写于2026年4月20日晚</p>
+
+</body>
+</html>
